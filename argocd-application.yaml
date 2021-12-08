@@ -2,7 +2,6 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: argocd-cre-application
-  namespace: argocd-cre
 spec:
   destination:
     namespace: app-cre

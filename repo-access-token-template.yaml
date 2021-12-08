@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: argocd-repo-access-token
+  labels:
+    argocd.argoproj.io/secret-type: repository
+stringData:
+  url: https://github.com/AmrFawzymoh/argocd-cre
+  password: <Your_GitHub_Access_Token>
+  username: not-used
