@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: argocd-cre
+  name: argocd-cre-application
   namespace: argocd-cre
 spec:
   destination:
@@ -17,4 +17,4 @@ spec:
       prune: true
       selfHeal: true
     syncOptions:
-    - CreateNamespace=true      
+    - CreateNamespace=true  

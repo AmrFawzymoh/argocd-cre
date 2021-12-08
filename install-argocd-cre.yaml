@@ -107,7 +107,7 @@ spec:
                 description: Sync contains parameters for the operation
                 properties:
                   dryRun:
-                    description: DryRun specifies to perform a `kubectl apply --dry-run`
+                    description: DryRun specifies to perform a 
                       without actually performing the sync
                     type: boolean
                   manifests:
@@ -399,12 +399,12 @@ spec:
                     description: SyncStrategy describes how to perform the sync
                     properties:
                       apply:
-                        description: Apply will perform a `kubectl apply` to perform
+                        description: Apply will perform a  to perform
                           the sync.
                         properties:
                           force:
                             description: Force indicates whether or not to supply
-                              the --force flag to `kubectl apply`. The --force flag
+                              the --force flag to . The --force flag
                               deletes and re-create the resource, when PATCH encounters
                               conflict and has retried for 5 times.
                             type: boolean
@@ -415,7 +415,7 @@ spec:
                         properties:
                           force:
                             description: Force indicates whether or not to supply
-                              the --force flag to `kubectl apply`. The --force flag
+                              the --force flag to . The --force flag
                               deletes and re-create the resource, when PATCH encounters
                               conflict and has retried for 5 times.
                             type: boolean
@@ -1206,8 +1206,7 @@ spec:
                         description: Sync contains parameters for the operation
                         properties:
                           dryRun:
-                            description: DryRun specifies to perform a `kubectl apply
-                              --dry-run` without actually performing the sync
+                            description: DryRun specifies to perform a  without actually performing the sync
                             type: boolean
                           manifests:
                             description: Manifests is an optional field that overrides
@@ -1518,12 +1517,12 @@ spec:
                               sync
                             properties:
                               apply:
-                                description: Apply will perform a `kubectl apply`
+                                description: Apply will perform a 
                                   to perform the sync.
                                 properties:
                                   force:
                                     description: Force indicates whether or not to
-                                      supply the --force flag to `kubectl apply`.
+                                      supply the --force flag to .
                                       The --force flag deletes and re-create the resource,
                                       when PATCH encounters conflict and has retried
                                       for 5 times.
@@ -1535,7 +1534,7 @@ spec:
                                 properties:
                                   force:
                                     description: Force indicates whether or not to
-                                      supply the --force flag to `kubectl apply`.
+                                      supply the --force flag to .
                                       The --force flag deletes and re-create the resource,
                                       when PATCH encounters conflict and has retried
                                       for 5 times.
@@ -2872,7 +2871,7 @@ metadata:
     app.kubernetes.io/component: application-controller
     app.kubernetes.io/name: argocd-application-controller
     app.kubernetes.io/part-of: argocd
-  name: argocd-application-controller-$cre_namespace
+  name: argocd-application-controller-argocd-cre
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
@@ -2880,7 +2879,7 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: argocd-application-controller
-  namespace: $cre_namespace
+  namespace: argocd-cre
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
@@ -2889,7 +2888,7 @@ metadata:
     app.kubernetes.io/component: server
     app.kubernetes.io/name: argocd-server
     app.kubernetes.io/part-of: argocd
-  name: argocd-server-$cre_namespace
+  name: argocd-server-argocd-cre
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
@@ -2897,7 +2896,7 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: argocd-server
-  namespace: $cre_namespace
+  namespace: argocd-cre
 ---
 apiVersion: v1
 kind: ConfigMap
