@@ -8,8 +8,8 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: workload
-    repoURL: https://github.com/AmrFawzymoh/argocd-cre
+    path: <GitHub_Manifest_Repo_Path>
+    repoURL: <Your_GitHub_Repository_URL>
     targetRevision: main
   syncPolicy:
     automated:

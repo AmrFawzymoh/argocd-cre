@@ -5,6 +5,6 @@ metadata:
   labels:
     argocd.argoproj.io/secret-type: repository
 stringData:
-  url: https://github.com/AmrFawzymoh/argocd-cre
+  url: <Your_GitHub_Repository_URL>
   password: <Your_GitHub_Access_Token>
   username: not-used
