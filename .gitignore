@@ -1,3 +1,4 @@
 repo-access-token.yaml
 argocd-application.yaml
 install-argocd-cre.yaml
+install-argocd-client.yaml

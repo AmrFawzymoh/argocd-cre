@@ -4,6 +4,7 @@ metadata:
   name: argocd-client-application
 spec:
   destination:
+    namespace: app-client
     server: https://kubernetes.default.svc
   project: default
   source:
