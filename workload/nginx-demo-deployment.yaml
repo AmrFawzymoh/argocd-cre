@@ -5,7 +5,7 @@ metadata:
     app: nginx-demo-deployment
   name: nginx-demo-deployment
 spec:
-  replicas: 4
+  replicas: 6
   selector:
     matchLabels:
       app: nginx-demo-deployment
